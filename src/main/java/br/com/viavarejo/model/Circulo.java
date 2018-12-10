@@ -21,7 +21,7 @@ public class Circulo {
 		this.centro = centro;
 	}
 
-	public float calcularArea() {
+	public float calcularAreaRetangulo() {
 		final float pi = 3.14F;
 		float area = (float) (Math.pow(comprimento.getW(), 2) * pi);
 		return area;

@@ -6,6 +6,8 @@ import br.com.viavarejo.model.Circulo;
 import br.com.viavarejo.model.Ponto;
 import br.com.viavarejo.model.Quadrado;
 import br.com.viavarejo.model.Raio;
+import br.com.viavarejo.model.Retangulo;
+import br.com.viavarejo.model.Triangulo;
 
 /**
  * Hello world!
@@ -21,27 +23,28 @@ public class App {
 		um.setY(1);
 
 		Ponto dois = new Ponto();
-		dois.setX(4);
-		dois.setY(3);
+		dois.setX(8);
+		dois.setY(9);
 
-		Quadrado quad = new Quadrado();
-		quad.setInferiorEsquerdo(um);
-		quad.setSuperiorDireito(dois);
+		Retangulo retan = new Retangulo();
+		retan.setInferiorDireito(um);
+		retan.setSuperiorEsquerdo(dois);
 
-		log.info(quad.calcularArea());
+		log.info(retan.calcularAreaRetangulo());
 
-		Raio tres = new Raio();
-		tres.setW(5);
-
-		Ponto quatro = new Ponto();
-		quatro.setX(10);
-		quatro.setY(5);		
+		Ponto tres = new Ponto();
+		tres.setX(100);
+		tres.setY(5);
 		
-		Circulo circ = new Circulo();
-		circ.setComprimento(tres);
-		circ.setCentro(quatro);
+		Ponto quatro = new Ponto();
+		quatro.setX(50);
+		quatro.setY(10);		
+		
+		Triangulo trian = new Triangulo();
+		trian.setInferior(tres);
+		trian.setSuperior(quatro);
 
-		log.info(circ.calcularArea());
+		log.info(trian.calcularAreaTriangulo());
 
 	}
 }
