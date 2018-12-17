@@ -20,8 +20,8 @@ public class Triangulo {
 	}
 	
 	public float calcularAreaTriangulo() {
-		float base = (superior.getX() - inferior.getX()) * 2;
-		float altura = superior.getY() - inferior.getY();
+		float base = Math.abs((superior.getX() - inferior.getX()) * 2);
+		float altura = Math.abs(superior.getY() - inferior.getY());
 		return (float) (base * altura) / 2;
 	}
 	
